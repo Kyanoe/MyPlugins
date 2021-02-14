@@ -22,6 +22,7 @@ public class give implements CommandExecutor {
                         int amount = Integer.parseInt(args[2]);
                         Player target = Bukkit.getPlayer(args[0]);
                         Material material = Material.matchMaterial(args[1]);
+                        return true;
                         if (target != null) {
                             target.getInventory().addItem(new ItemStack(material, amount));
                             player.sendMessage(colored("&aSuccessfully give " + " &e" + args[0] + " &afor &e" + args[2] + "&ex " + args[1]));
@@ -45,6 +46,7 @@ public class give implements CommandExecutor {
                      }
                 }else{
                     sender.sendMessage(colored("&7Usage: &c/give <player> <item> <amount>"));
+                    return true;
                 }
             }else{
                 if (args.length >= 3){
@@ -52,6 +54,7 @@ public class give implements CommandExecutor {
                         int amount = Integer.parseInt(args[2]);
                         Player target = Bukkit.getPlayer(args[0]);
                         Material material = Material.matchMaterial(args[1]);
+                        return true;
                         if (target == null){
                             sender.sendMessage(colored("&cThe player doesn't exist"));
                             return true;
