@@ -31,7 +31,7 @@ public class feed implements CommandExecutor {
                  return true;
              }
          }else{
-             sender.sendMessage(colored("&cYou can't use this commanda at console."));
+             sender.sendMessage(colored("&cYou can't use this command at console."));
              return true;
             }
         }
